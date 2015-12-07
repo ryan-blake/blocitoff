@@ -13,6 +13,8 @@ source 'https://rubygems.org'
  # #2
  group :development do
    gem 'sqlite3'
+   gem 'rails_12factor'
+
  end
 
  # Use SCSS for stylesheets
