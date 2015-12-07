@@ -33,3 +33,5 @@ source 'https://rubygems.org'
  gem 'turbolinks'
 #devise gem for users sign in, validate with email
 gem 'devise'
+#twitter bootstrap
+gem 'bootstrap-sass'
