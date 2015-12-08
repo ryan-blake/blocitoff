@@ -3,5 +3,6 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+ root as: 'user#show'
   root to: 'welcome#index'
 end
