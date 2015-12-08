@@ -18,7 +18,8 @@ source 'https://rubygems.org'
  group :development do
    gem 'sqlite3'
    gem 'rails_12factor'
-
+   gem 'web-console'
+   gem 'annotate'
  end
 
  # Use SCSS for stylesheets

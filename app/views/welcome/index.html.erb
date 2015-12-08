@@ -2,22 +2,4 @@
 <%= link_to "Sign In", user_session_path %>
 <%= link_to "Sign Out", destroy_user_session_path %> -->
 
-<div class="container-fluid nav-collapse">
-  <% if user_signed_in? %>
-  <ul class="nav">
-  <!-- <li><%= link_to "Link1", "/path1"  %></li>
-       <li><%= link_to "Link2", "/path2"  %></li>
-       <li><%= link_to "Link3", "/path3"  %></li> -->
-    <li>Welcome, <%= current_user.email %>!</li>
-  </ul>
-  <ul class="nav pull-right">
-    <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
-    <% else %>
-    <ul class="nav pull-right">
-      <li><%= link_to "Sign in", new_user_session_path %></li>
-      <li><%= link_to "Sign up", new_user_registration_path %></li>
-      <% end %>
-    </ul>
-  </div>
-
-  <h1>Welcome to Blocitoff's Index Page</h1>
+<h1>Welcome to Blocitoff</h1>
