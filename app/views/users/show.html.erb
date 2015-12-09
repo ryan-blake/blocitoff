@@ -5,8 +5,8 @@
 </head>
 <body>
   <h1>
-    <%= current_user.email.split("@")[0]  %>
+    <% cu = current_user.email.split("@")[0]   %>
+    <%= cu.capitalize + "'s to do list." %>
   </h1>
-<h2> To Do List </h2>
 </body>
 </html>
