@@ -1,0 +1,22 @@
+
+<table>
+  <tr>
+    <th>name</th>
+  </tr>
+  <tr>
+    <% Item.all.each do |s| %>
+   <ul>
+      <li><%= s.name %></li>
+    </ul>
+    <% end %>
+  </tr>
+</table>
+
+<h4>Add an Item</h4>
+
+<%= form_for Item.new do |f| %>
+  <%= f.label @user, class: 'sr-only'  %>:
+  <%= f.text_field :name %><br />
+
+  <%= f.submit "Submit item", class: 'btn btn-default pull-right' %>
+<% end %>

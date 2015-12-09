@@ -1,29 +1,26 @@
 include RandomData
 
 # Creates Users
-5.times do
-  user = User.create!(
-  # #3
-  name:     RandomData.random_name,
-  email:    RandomData.random_email,
-  password: RandomData.random_sentence
-  )
-end
-users = User.all
+# 5.times do
+#   user = User.create!(
+#   # #3
+#   name:     RandomData.random_name,
+#   email:    RandomData.random_email,
+#   password: RandomData.random_sentence
+#   )
+# end
+# users = User.all
 
 
 # Creates Posts
-50.times do
-  Post.create!(
-  user:   users.sample,
-  topic:  topics.sample,
-  title:  Faker::Lorem.sentence,
-  body:   Faker::Lorem.paragraph
+5.times do
+  Item.create!(
+  name:   random_sentence
   )
 end
-posts = Post.all
+@items = Item.all
 
 
 puts "Seed finished"
-puts "#{User.count} users created"
-puts "#{Post.count} posts created"
+puts "#{Item.count}  items created"
+# puts "#{Post.count} posts created"
