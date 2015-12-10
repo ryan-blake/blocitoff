@@ -38,4 +38,7 @@ class ItemsController < ApplicationController
       redirect_to [user.item]
     end
   end
+  def go_back
+    redirect_to :back
+  end
 end

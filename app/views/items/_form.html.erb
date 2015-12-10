@@ -12,10 +12,11 @@
 </table>
 
 <h4>Add an Item</h4>
-
+<div>
 <%= form_for Item.new do |f| %>
   <%= f.label @user, class: 'sr-only'  %>:
   <%= f.text_field :name %><br />
 
   <%= f.submit "Submit item", class: 'btn btn-default pull-right' %>
 <% end %>
+</div>
