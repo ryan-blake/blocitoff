@@ -1,9 +1,8 @@
 class ItemsController < ApplicationController
-  before_filter :authenticate_user
 
   def create
 
-    @item = items.new(item_params)
+    @item = Item.new(item_params)
     @item.user = current_user
     @new_item = Item.new
 
@@ -15,6 +14,7 @@ class ItemsController < ApplicationController
 
     respond_to do |format|
       format.html
+
     end
   end
 

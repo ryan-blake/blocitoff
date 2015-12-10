@@ -6,6 +6,10 @@ module RandomData
     "#{first_name} #{last_name}"
   end
 
+  def p
+    p = "testtest"
+  end
+
   def random_email
     "#{random_word}@#{random_word}.#{random_word}"
   end

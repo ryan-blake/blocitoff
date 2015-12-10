@@ -7,7 +7,6 @@
   <h1>
     <% cu = current_user.email.split("@")[0]   %>
     <%= cu.capitalize + "'s to do list." %>
-    <%= render new %>
   </h1>
 </body>
 <div class="row">
@@ -18,7 +17,7 @@
       </div>
       <% if current_user %>
       <div class='new-comment'>
-        <%= render 'items/form', comment: Item.new, name: @item %>
+        <%= render 'items/form', item: Item.new %>
       </div>
       <% end %>
     </div>
