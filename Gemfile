@@ -38,3 +38,4 @@ gem 'devise'
 gem 'bootstrap-sass'
 #handling of sensitive info
 gem 'figaro', '1.0'
+gem 'faker'

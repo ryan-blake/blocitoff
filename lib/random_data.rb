@@ -1,43 +1,35 @@
 module RandomData
 
   def random_name
-    first_name = random_word.capitalize
-    last_name = random_word.capitalize
-    "#{first_name} #{last_name}"
+    # first_name = random_word.capitalize
+    # last_name = random_word.capitalize
+    # "#{first_name} #{last_name}"
+    Faker::Name.name
   end
 
   def p
-    p = "testtest"
+    pw = "testtest"
   end
 
   def random_email
-    "#{random_word}@#{random_word}.#{random_word}"
+    Faker::Internet.email
   end
 
   def random_paragraph
-    sentences = []
-    rand(4..6).times do
-      sentences << random_sentence
-    end
-
-    sentences.join(" ")
+    Faker::Hipster.paragraph
   end
+
+
 
   # #7
   def random_sentence
-    strings = []
-    rand(3..8).times do
-      strings << random_word
-    end
-
-    sentence = strings.join(" ")
-    sentence.capitalize << "."
+    Faker::Hipster.sentence
   end
+
 
   # #8
   def random_word
-    letters = ('a'..'z').to_a
-    letters.shuffle!
-    letters[0,rand(3..8)].join
+    Faker::Hipster.words
   end
+
 end

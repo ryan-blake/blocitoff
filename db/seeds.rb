@@ -4,17 +4,17 @@ include RandomData
 1.times do
   user = User.create!(
   # #3
-  email:    "ryan_blake@mac.com",
+  email:    RandomData.random_email,
   password: RandomData.p
   )
 end
 @users = User.all
 
 
-# Creates Posts
+# Creates i
 5.times do
   Item.create!(
-  name:   random_sentence
+  name:   RandomData.random_name
   )
 end
 @items = Item.all
