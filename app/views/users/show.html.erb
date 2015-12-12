@@ -23,6 +23,11 @@
           <%= render 'items/form', item: @new_item %>
         </div>
       <% end %>
+      <small>
+           <%= pluralize(@user.item.count, 'user') %>,
+           <div class='js-items-count'><%= pluralize(@user.item.count, 'item') %></div>
+         </small>
+
     </div>
 
 

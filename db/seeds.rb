@@ -1,7 +1,7 @@
 include RandomData
 
 #Creates Users
-1.times do
+5.times do
   user = User.create!(
   # #3
   email:    RandomData.random_email,
@@ -12,7 +12,7 @@ end
 
 
 # Creates i
-5.times do
+20.times do
   Item.create!(
   name:   RandomData.random_name
   )

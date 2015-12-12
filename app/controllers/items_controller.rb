@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
 
   def create
 
-    @item = Item.new(item_params)
+    @item = Item.find(item_params)
     @item.user = current_user
     @new_item = Item.new
 
@@ -18,6 +18,26 @@ class ItemsController < ApplicationController
 
     end
   end
+
+
+  def destroy
+  @item = item.find(params[:post_id])
+# #3
+
+  if item.destroy
+    flash[:notice] = "Comment was deleted."
+    redirect_to [@user]
+  else
+    flash.now[:alert] = "Comment couldn't be deleted. Try again."
+    redirect_to [@user]
+  end
+# #4
+  respond_to do |format|
+    format.html
+    format.js
+  end
+end
+
 
   def show
     @items = Item.all

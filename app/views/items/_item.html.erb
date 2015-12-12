@@ -1,3 +1,5 @@
 <li id=<%=item.id %>>
   <%= item.name %>
+  | <%= link_to "Delete", [user.item, item], method: :delete, remote: true %>
+
 </li>
