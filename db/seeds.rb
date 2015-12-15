@@ -2,22 +2,25 @@ include RandomData
 
 #Creates Users
 5.times do
-  user = User.create!(
+  user = User.new(
   # #3
   email:    RandomData.random_email,
   password: RandomData.p
   )
+  user.skip_confirmation!
+  user.save!
 end
-@users = User.all
+users = User.all
 
 
 # Creates i
 20.times do
   Item.create!(
-  name:   RandomData.random_name
+    name:   RandomData.random_name,
+    user:   users.sample
   )
 end
-@items = Item.all
+items = Item.all
 
 
 puts "Seed finished"

@@ -1,34 +1,25 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Blocitoff list</title>
-</head>
-<body>
-  <h1>
-    <% cu = current_user.email.split("@")[0]   %>
-    <%= cu.capitalize + "'s to do list." %>
-  </h1>
-</body>
+<h1>
+  <% cu = current_user.email.split("@")[0]   %>
+  <%= cu.capitalize + "'s to do list." %>
+</h1>
 <div class="row">
   <div class="col-md-8">
-    <div>
-      <h3>Items</h3>
-    </div>
+    <h3>Items</h3>
+    <small>
+      <div class='js-items-count'>
+        <%= pluralize(@user.items.count, 'item') %>
       </div>
-      <% if current_user %>
-        <ul class="items">
-            <%= render @items %>
-        </ul>
-        <div class='new-item'>
-          <%= render 'items/form', item: @new_item %>
-        </div>
-      <% end %>
-      <small>
-           <%= pluralize(@user.item.count, 'user') %>,
-           <div class='js-items-count'><%= pluralize(@user.item.count, 'item') %></div>
-         </small>
-
-    </div>
+    </small>
+    <% if current_user %>
+      <ul class="items">
+        <%= render @items %>
+      </ul>
+      <div class='new-item'>
+        <%= render 'items/form', item: @new_item %>
+      </div>
+    <% end %>
+  </div>
+</div>
 
 
 </html>

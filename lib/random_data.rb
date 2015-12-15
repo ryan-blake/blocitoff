@@ -8,7 +8,7 @@ module RandomData
   end
 
   def p
-    pw = "testtest"
+    "testtest"
   end
 
   def random_email

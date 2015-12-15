@@ -1,11 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'items/create'
-
-  get 'items/new'
-
-  get 'items/destroy'
-
   devise_for :users
 
   authenticated :user do
@@ -13,7 +7,7 @@ Rails.application.routes.draw do
   end
   # root to: "users#show", as: :authenticated_root
 
-  resources :items, only: (:create)
+  resources :items
 
   root to: 'welcome#index'
 end
