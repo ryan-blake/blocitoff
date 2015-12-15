@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   get 'items/new'
 
+  get 'items/destroy'
+
   devise_for :users
 
   authenticated :user do
