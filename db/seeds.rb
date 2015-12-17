@@ -17,7 +17,8 @@ users = User.all
 20.times do
   Item.create!(
     name:   RandomData.random_name,
-    user:   users.sample
+    user:   users.sample,
+    # created_at: "2015-12-10 20:24:01"
   )
 end
 items = Item.all
