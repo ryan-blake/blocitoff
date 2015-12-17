@@ -41,3 +41,5 @@ gem 'figaro', '1.0'
 gem 'faker'
 #distance_of_time_in_words
 gem 'dotiw', '~> 3.0', '>= 3.0.1'
+#wheneverize tasks
+gem 'whenever', :require => false
