@@ -10,6 +10,7 @@ group :production do
 
 end
 
+gem "pundit"
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'

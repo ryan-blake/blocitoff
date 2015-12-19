@@ -1,6 +1,6 @@
 
 <li id=<%="item-#{item.id}" %>>
-  <%= item.name %> :You have <%= time_ago_in_words(item.created_at + 7.days)%> to finish.
+  <%= item.name %> :You have <%= item.time_left %> to finish.
   | <%= link_to "delete item", item, method: :delete, remote: true %>
 </li>
 <!--link to  -->
