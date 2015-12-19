@@ -7,10 +7,30 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  
-  <%= yield %>
+  <ul class="nav nav-tabs">
+    <li><%= link_to "Bloccitoff" , root_path %></li>
+    <div class="pull-right user-info">
+      <% if current_user %>
+        <%= link_to current_user.email, edit_user_registration_path(current_user) %>
+        <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+      <% else %>
+        <%= link_to "Sign In", new_user_session_path %> or
+        <%= link_to "Sign Up", new_user_registration_path %>
+      <% end %>
+    </div>
+  </ul>
+  <div class="container">
+    <% if flash[:notice] %>
+      <div class="notice"><%= flash[:notice] %></div>
+    <% elsif flash[:alert] %>
+      <div class="alert"><%= flash[:alert] %></div>
+    <% elsif flash[:error] %>
+      <div class="alert"><%= flash[:error] %></div>
+    <% end %>
+
+    <%= yield %>
+  </div>
+
 
 </body>
 </html>

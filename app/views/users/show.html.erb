@@ -1,0 +1,20 @@
+<h1>
+  <% cu = current_user.email.split("@")[0]   %>
+  <%= cu.capitalize + "'s to do list." %>
+</h1>
+<div class="col-md-8">
+  <h3>Items</h3>
+  <small>
+    <div class='js-items-count'>
+      <%= pluralize(@user.items.count, 'item') %>
+    </div>
+  </small>
+  <% if current_user %>
+  <ul class="items">
+    <%= render @items %>
+  </ul>
+  <div class='new-item'>
+    <%= render 'items/form', item: @new_item %>
+  </div>
+  <% end %>
+</div>
